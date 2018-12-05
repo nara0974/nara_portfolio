@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/* reset */
+html {-webkit-text-size-adjust: none; text-size-adjust: none;} /*자동으로 폰트크기조정 막음 -webkit-은 구글,사파리 브라우저 적용*/
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, table {margin: 0; padding: 0;}
+header, main, footer, section, article, aside, nav {display: block;}
+a {color: inherit; text-decoration: inherit;}
+img {max-width: 100%;  vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+table {border-collapse: collapse;}
+.pc {display: none;}
+
+/* common */
+body {font-family: Arial, Dotum, Helvetica, 'Apple SD Gothic Neo', sans-serif; color: #333333; font-size: 13px; background: #ffffff;}
+#wrapper {min-width: 320px; max-width: 768px; margin: 0 auto; overflow:hidden;} /*overflow: hidden; 흔들리는것 방지 */
+#skip-nav {position: fixed; left: 0; top: -40px; width: 100%; text-align: center; line-height: 40px; background: rgba(0, 0, 0, 0.5); color: #ffffff;
+font-size: 16px; z-index: 10000; transition: top 0.3s;} /*높이랑 line-height값이 같으면 위아래 모두 가운데 위치 */
+#skip-nav:focus {top: 0;}
+#header {height: 48px; border-bottom: 2px solid #bc182d; position: relative; z-index: 100;}
+#header h1 {width: 150px; margin: 0 auto; padding-top: 9px;} /*기아로고*/
+#header a.menu {position: absolute; left: 10px; top: 16px; width: 20px;} /*햄버거메뉴*/
+#sns-link {display: none;}
+#gnb {position: absolute; left: 0; top: 50px; background: rgba(255, 255, 255, 0.9); width: 70%; box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5); left: -75%; transition: left 0.4s;} /*평소에는 왼쪽에 밀어있다가 햄버거 메뉴를 누를때(on) 나타남*/
+#gnb.on {left: 0;}
+#gnb ul li {border-bottom: 1px solid #999999;}
+#gnb ul li a {display: block; line-height: 30px; font-size: 14px; padding-left: 20px;}
+#header a.search {position: absolute; right: 10px; top: 15px; width: 20px;}
+#header p.search {position: absolute; right: 0; top: 50px; width: 100%; background: rgba(255, 255, 255, 0.9); text-align: center; 
+line-height: 40px; box-shadow: 0 2px 5px ragb(0, 0, 0, 0.5); height: 0; overflow: hidden; transition: height 04.s;}
+#header p.search.on {height: 40px;} /*검색돋보기 버튼 클릭시에 검색창이 내려옴*/
+#header p.search * {vertical-align: middle;}
+#header p.search label {font-size: 12px; font-weight: bold; margin-right: 5px;}
+#header p.search input[type=text] {border: 1px solid #999999; width: 140px; height: 24px; border-radius: 3px; padding: 0 5px; box-shadow: 1px 1px 3px 0 
+rgba(0, 0, 0, 0.2) inset;}
+
+#footer {border-top: 1px solid #bbbbbb; color: #999999;}
+#footer ul.link li {border-bottom: 1px solid #bbbbbb;}
+#footer ul.link a {display: block; line-height: 40px; font-size: 15px; padding-left: 20px;}
+#footer ul.sns {text-align: center; line-height: 40px;}
+#footer ul.sns li {display: inline-block; vertical-align: middle; margin: 0 3px;}
+#footer p.copyright {line-height: 36px; border-top: 2px solid #bc182d;  font-size: 10px; text-align: center; letter-spacing: -1px;}
+/*letter-spacing 글자간격 조정*/
+
+/* main */
+#main-visual {position: relative;}
+#main-visual p.bg {opacity: 0;}
+#main-visual p.bg img {width: 100%;}
+#main-visual ul.image li {position: absolute; left: 0; top: 0; display: none; width: 100%;}
+#main-visual ul.image li:first-child {display: block;}
+#main-visual ul.image li img {width: 100%;}
+#main-visual ul.indicator {position: absolute; right: 10px; bottom: 10px;}
+#main-visual ul.indicator li {float: left; margin-left: 3px;}
+#main-visual ul.indicator li a {display: block; width: 20px; line-height: 20px; text-align: center; background: rgba(0, 0, 0, 0.6); color: #ffffff;}
+#main-visual ul.indicator li.on a {background: #bc182d;}
+
+#main-article {padding: 30px 10px;}
+#main-article h2 {color: #bc182d; margin-bottom: 20px; font-size: 18px;} /*Recent Stories*/
+#main-article p.more a {display: block; line-height: 40px; background: #bbbbbb; color: #ffffff; text-align: center; font-size: 16px;} /*more버튼*/
+#main-article p.more a i {margin-left: 8px;}
+
+
+
+/* module */
+ul.article {}
+ul.article li {margin-bottom: 20px;}
+ul.article li > * {display: block;}
+ul.article li span.category {font-size: 12px; color: #777777; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+ul.article li a {margin-bottom: 5px; min-height: 100px; background: url(../img/logo.gif) center center no-repeat; background-size: 200px auto; 
+box-shadow: 0 0 1px 0 #bbbbbb inset; overflow: hidden;} 
+ul.article li a img {width: 100%;}
+ul.article li em.title {font-size: 15px; font-weight: bold;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

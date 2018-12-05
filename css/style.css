@@ -1,0 +1,261 @@
+@charset "UTF-8";
+
+/*font-face*/
+@font-face {
+  font-family:"interpark KR";
+  src: url(../font/InterparkGothicMedium.woff) format('woff'),
+       url(../font/InterparkGothicMedium.ttf) format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family:"interpark KR";
+  src: url(../font/InterparkGothicBold.woff) format('woff'),
+       url(../font/InterparkGothicBold.ttf) format('ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+ 
+/*reset*/
+* {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; box-sizing: border-box; text-decoration: none; list-style: none;}
+
+/*common*/
+.clear-fix:after{
+  display: block;
+  content: '';
+  clear: both;
+}
+
+body {font-family: "interpark KR", sans-serif; font-size: 12px; line-height: 18px; color: #666;  text-decoration: none; background: #040309;}
+a {font-family: "interpark KR", sans-serif; font-size: 12px; line-height: 18px; color: #666;  text-decoration: none;}
+#wrap {overflow: hidden;}
+/*본문 바로가기*/
+#skip-nav {position: fixed; left: 0; top: -41px; width: 100%; font-size: 16px; line-height: 40px; text-align: center; background: rgba(0, 0, 0, 0.6);
+color: #fff; border-bottom: 1px solid #fff; transition: top 0.3s; z-index: 100000;}
+#skip-nav:focus {top: 0;}
+
+/*header 영역*/
+header {background: url(../img/bg.jpg) no-repeat 50% 100%; background-size: cover;}
+header > div {width: 1170px; margin: 0 auto;} /*clear-fix*/
+header > div.text {padding: 120px 120px 56px 0;}
+header h1 {float: left; padding: 30px 0 0 10px;}
+header nav {float: right;}
+header nav a.mobile {display: none;}
+header nav ul li {float: left; margin-left: 33px;}
+header nav ul li a {display: block; height: 84px; font-size: 20px; line-height: 107px; padding: 0 10px; color: #fff;  font-weight: bold; transition: 1s;}
+header nav ul li.on a,header nav ul li a:hover {color: #333; background: #d6c6b2;} /*hover,click 효과*/
+header div.text span {display: block; font-size: 20px; line-height: 40px; text-align: right; color: #fff;}
+header div.text em {display: block; font-size: 102px; line-height: 94px; text-align: right; color: #fff;}
+header div.text strong {display: block; font-size: 85px; line-height: 86px; text-align: right; color: #fff; letter-spacing: 5px;}
+header div.text div {padding-top: 33px; padding-bottom: 56px; float: right;}
+header div.text div a {display: inline-block; color: #fff; width: 136px; font-size: 16px; line-height: 36px; margin-left: 30px;  border: 2px solid #d6c6b2; text-align: center;}
+header div.text div a.on,header div.text div a:hover {background: #d6c6b2; color: #333; font-weight: bold;}
+
+/*article-about me 영역*/
+article.about-me {background-color: #282828; box-sizing: border-box; padding-bottom: 22px;}
+article.about-me > div {width: 1170px; margin: 0 auto; padding-top: 98px; overflow: hidden;}
+article.about-me div div a {float: left; padding-right: 32px; padding-bottom: 100px;}
+article.about-me div h3 {display: inline-block; font-size: 32px; line-height: 32px; color: #bcae9d; padding-top: 22px;}
+article.about-me div p {font-size: 16px; line-height: 30px; color: #fff; padding-top: 45px;}
+article.about-me div span {display: inline-block; font-size: 32px; color: #bcae9d; padding: 45px 0 30px 0;}
+article.about-me div ul li {float: left; margin-right: 20px;} /*Hire me 아이콘*/
+article.about-me div ul li:last-child {margin-right: 0;}
+article.about-me div ul li a {display: block; width: 50px; height: 50px; padding-right: 30px;  text-indent:-9999px;}
+article.about-me div ul li a:last-child {padding-right: 0;}
+article.about-me div ul li.fiverr a {background: url(../img/icon_1.png) no-repeat 50% 50%; padding-bottom: 50px;}
+article.about-me div ul li.fiverr a:hover {background: url(../img/icon_1_h.png) no-repeat 50% 50%; padding-bottom: 50px;}
+article.about-me div ul li.evnato a {background: url(../img/icon_2.png) no-repeat 50% 50%; padding-bottom: 50px;}
+article.about-me div ul li.evnato a:hover {background: url(../img/icon_2_h.png) no-repeat 50% 50%; padding-bottom: 50px;}
+article.about-me div ul li.freepik a {background: url(../img/icon_3.png) no-repeat 50% 50%; padding-bottom: 50px;}
+article.about-me div ul li.freepik a:hover {background: url(../img/icon_3_h.png) no-repeat 50% 50%; padding-bottom: 50px;}
+article.about-me div ul li.dribbble a {background: url(../img/icon_4.png) no-repeat 50% 50%; padding-bottom: 50px;}
+article.about-me div ul li.dribbble a:hover {background: url(../img/icon_4_h.png) no-repeat 50% 50%; padding-bottom: 50px;}
+article.about-me div ul li.youtube a {background: url(../img/icon_5.png) no-repeat 50% 50%; padding-bottom: 50px;}
+article.about-me div ul li.youtube a:hover {background: url(../img/icon_5_h.png) no-repeat 50% 50%; padding-bottom: 50px;}
+
+/*article-my ability 영역*/
+article.ability {background: url(../img/bg%20shape.png) 100%;}
+article.ability > div {width: 1170px; margin: 0 auto;}
+article.ability > div h3 {display: block; font-size:32px; line-height: 32px; color: #bcae9d; text-align: center; padding-top: 60px;}
+article.ability div ul {}
+article.ability div ul li {} 
+article.ability div > ul li dl {box-sizing: border-box; padding-right: 40px; color: #fff; text-align: center;}
+article.ability div > ul li dl dt {padding-bottom: 30px;}
+article.ability div ul li.html5 dl dt {background: url(../img/html5.png) no-repeat 50% 50%; padding-top: 182px; font-size: 20px; font-weight: bold;} 
+article.ability div ul li.css3 dl dt {background: url(../img/css3.png) no-repeat 50% 50%; padding-top: 182px; font-size: 20px; font-weight: bold;} 
+article.ability div ul li.jquery dl dt {background: url(../img/jquery.png) no-repeat 50% 50%; padding-top: 182px; font-size: 20px; font-weight: bold;} 
+article.ability div ul li.photoshop dl dt {background: url(../img/photoshop.png) no-repeat 50% 50%; padding-top: 182px; font-size: 20px; font-weight: bold;} 
+article.ability div div.btn {width: 1170px; display: block; text-align: center; padding: 60px 0 60px 0;}
+article.ability div div.btn a {display: inline-block; text-indent: -9999px; width: 45px; height: 30px; margin: 0 10px;}
+article.ability div div.btn a.prev {background: url(../img/btn-pre.png) no-repeat 50% 50%;}
+article.ability div div.btn a.next {background: url(../img/btn-next.png) no-repeat 50% 50%;}
+
+/*article-my portfolio 영역*/
+/*my-portfolio f-left*/
+article.portfolio {background: #333;}
+article.portfolio > div {width: 1170px; margin: 0 auto;}
+article.portfolio > div h3 {display: block; font-size:32px; line-height: 32px; color: #bcae9d; text-align: center; padding: 60px;}
+article.portfolio div.f-left {float: left; padding-right: 30px;}
+article.portfolio div.left-top:first-child{padding-bottom: 30px;}
+article.portfolio div.left-top div.img {float: left;}
+article.portfolio div.left-top div.img a {display: inline-block;}
+article.portfolio div.left-top div.text {float: left; width: 400px; height: 313px; padding: 30px; box-sizing: border-box; background: #282828;} 
+article.portfolio div.left-bottom div.img {float: left;}
+article.portfolio div.left-bottom div.img a {display: inline-block;}
+article.portfolio div.left-bottom div.img a img {float: left;}
+article.portfolio div.left-bottom div.text {float: left; width: 400px; height: 313px; padding: 30px; box-sizing: border-box; background: #282828;}
+article.portfolio div.f-left p.fa-user-alt {font-size: 14px; color: #999; font-family: "interpark KR";} /*my-portfolio f-left div.text*/
+article.portfolio div.f-left p.fa-user-alt:before {font-family: "Font Awesome\ 5 Free";}
+article.portfolio div.f-left p.title {font-size: 20px; color: #fff; line-height: 30px; padding: 20px 0;}
+article.portfolio div.f-left p.title:hover {color: #bcae9d;}
+article.portfolio div.f-left p.box-text {font-size: 14px; color: #999; line-height: 24px;}
+article.portfolio div.f-left div.read-more {padding-top: 16px;}
+article.portfolio div.f-left div.read-more a {font-size: 16px; color: #fff;}
+article.portfolio div.f-left div.read-more a:hover {color: #bcae9d;}
+/*my-portfolio f-right*/
+article.portfolio div.f-right {float: left;}
+article.portfolio div.f-right div.img {height: 343px;}
+article.portfolio div.f-right div.img a img {float: left;}
+article.portfolio div.f-right div.text {float: left; width: 470px; padding: 35px; box-sizing: border-box; background: #d6c6b2;}
+article.portfolio div.f-right p.fa-user-alt {font-size: 14px; color: #666; font-family: "interpark KR";}
+article.portfolio div.f-right p.fa-user-alt:before {font-family: "Font Awesome\ 5 Free";}
+article.portfolio div.f-right p.title {font-size: 20px; color: #111; line-height: 30px; padding: 20px 0;}
+article.portfolio div.f-right p.title:hover {color: #bcae9d;}
+article.portfolio div.f-right p.box-text {font-size: 14px; color: #666; line-height: 24px;}
+article.portfolio div.f-right div.read-more {padding-top: 16px;}
+article.portfolio div.f-right div.read-more a {font-size: 16px; color: #111;}
+article.portfolio div.f-right div.read-more a:hover {color: #fff;}
+article.portfolio div.browse {text-align: center; padding: 60px 0;} /*my portfolio BROWSE ALL 버튼*/
+article.portfolio div.browse a {display: inline-block; width: 138px; line-height: 44px; background: #d6c6b2; font-size: 16px; box-sizing: border-box; color: #111; font-weight: bold;} 
+
+/*footer 영역*/
+footer {background: #282828; box-sizing: border-box; }
+footer > div {width: 1170px; margin: 0 auto; text-align: center;}
+footer div.get-in-touch p {font-size: 20px; color: #fff; padding: 40px; box-sizing: border-box;}
+footer div.get-in-touch address a {display: block; padding: 10px; box-sizing: border-box; font-size: 16px; font-family: "interpark KR";}
+footer div.get-in-touch address a:hover {color: #d6c6b2;}
+footer div.get-in-touch address a:before {padding-right: 20px; font-family: "Font Awesome\ 5 Free";}
+footer div.follow-me p {font-size: 20px; color: #fff; padding: 36px; box-sizing: border-box;}
+footer div.follow-me ul {margin: 10px; padding-bottom: 20px;}
+footer div.follow-me ul li {display: inline-block;}
+footer div.follow-me ul li a {padding:0 15px 0 15px; font-size: 20px; line-height: 50px;}
+footer div.follow-me ul li a:hover {width: 50px; border-radius: 100px; background: #d6c6b2;}
+footer address > iframe {width: 100%; padding-bottom: 10px;}
+footer > p#copyright {margin: 0 auto; background: #333; text-align: center; color: #cccccc; font-size: 14px; line-height: 56px; box-shadow: 0 -3px 10px 0.5px #1e1e1e;}
+
+
+
+/*반응형 모바일*/
+/*mobile header*/
+@media screen and (max-width:900px) {
+  body {min-width: 320px;}
+  header {background: url(../img/bg.jpg) no-repeat 100% 100%; box-sizing: border-box;}
+  header > div {width: 100%; margin: 0 auto;}
+  header > div.text {padding: 0;}
+  header nav a.mobile{display: block; position: fixed; top: 38px; left: 18px;}
+  header nav a.mobile img {width: 50px; height: 50px;}
+  header nav ul {display: none;}
+  header nav ul.on {display: block;}
+  header nav ul {position: fixed; top: 88px; left: 12px; background-color: #111; opacity: 0.7; transition: left 0.5s;}
+  header nav ul li {float: none; margin: 0;}
+  header nav ul li a {display: block; height: 42px; font-size: 16px; line-height: 42px;}
+  header h1 {padding: 20px; width: 100%; text-align: center; box-sizing: border-box;} 
+  header div.text span {font-size: 15px;text-align: center;}
+  header div.text em {font-size: 51px; line-height: 94px; text-align: center;}
+  header div.text strong {font-size: 45px; line-height: 86px; text-align: center;}
+  header div.text div {width: 100%;text-align: center;}
+  header div.text div a {margin: 0 10px; line-height: }
+  
+  /*mobile about-me*/
+  article.about-me > div {width: 100%; padding: 20px 0 20px 0;}
+  article.about-me div div a {display: none;}
+  article.about-me div h3 {display:block; text-align: center; font-size: 32px; line-height: 32px;}
+  article.about-me div p {font-size: 14px; line-height: 30px; padding: 20px 30px; text-align: center;}
+  article.about-me div span {display: block; text-align: center; padding-top: 30px;}
+  article.about-me div ul {text-align: center;}
+  article.about-me div ul li {display: inline-block; float: none; margin-right: 10px;}
+  article.about-me div ul li:last-child {margin-right: 0;}
+  article.about-me div ul li a {display: block; width: 50px; height: 50px; padding-right: 10px;}
+  article.about-me div ul li a:last-child {padding-right: none;}
+  
+  /*mobile ability*/
+  article.ability {background:url(../img/bg%20shape.png) 50% 50%;}
+  article.ability > div {width: 100%;}
+  article.ability > div h3 {display: block; font-size:32px; text-align: center; line-height: 32px;}
+  article.ability div div.btn {width: 100%;}
+  article.ability div > ul li dl{width: 100%; padding: 20px;}
+  
+  /*mobile portfolio*/
+  article.portfolio > div {width: 100%; margin: 0 auto;}
+  article.portfolio > div h3 {display: block; font-size:32px; line-height: 32px;}
+  article.portfolio > div > div {width: 270px; margin: 0 auto;}
+  article.portfolio div.f-left {width: 100%; padding: 0;}
+  article.portfolio div.left-top div.img {height: 313px;}
+  article.portfolio div.left-top:first-child{padding-bottom: 15px;}
+  article.portfolio div.left-top div.text {width: 270px;}
+  article.portfolio div.left-bottom {padding-bottom: 15px;}
+  article.portfolio div.left-bottom div.img {height: 313px;}
+  article.portfolio div.left-bottom div.text {width: 270px;}
+  article.portfolio div.f-left p.fas fa-user-alt {font-size: 10px; line-height: 15px;} /*my-portfolio f-left div.text*/
+  article.portfolio div.f-left p.title {font-size: 15px;}
+  article.portfolio div.f-left p.box-text {font-size: 10px; line-height: 20px;}
+  article.portfolio div.f-left div.read-more {padding-top: 16px;}
+  article.portfolio div.f-right {width: 100%;}
+  article.portfolio div.f-right div.img {float: left;}
+  article.portfolio div.f-right div.img a img {float: left; width: 270px; height:343px;}
+  article.portfolio div.f-right div.text {width: 270px;}
+  article.portfolio div.f-right p.fas fa-user-alt {font-size: 10px; line-height: 15px;}
+  article.portfolio div.f-right p.title {font-size: 15px;}
+  article.portfolio div.f-right p.box-text {font-size: 10px; line-height: 20px;}
+  article.portfolio div.f-right div.read-more {padding-top: 16px;}
+  
+  /*mobile footer*/
+  footer {background: #282828; box-sizing: border-box;}
+  footer > div {width: 320px;}
+  footer address > iframe {width: 100%;}
+  footer address > a {}
+  footer div.get-in-touch p {padding: 30px; box-sizing: border-box;}
+  footer div.get-in-touch address a {display: block; padding: 20px; box-sizing: border-box; font-size: 14px;}
+  footer div.follow-me p {padding: 30px; box-sizing: border-box;}
+  
+}
+
+/*swiper css*/
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.swiper-slide {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+}

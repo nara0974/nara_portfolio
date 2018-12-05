@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/*web font*/
+@font-face {
+    font-family: 'KiaFont';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../font/KIA_LIGHT.woff) format('woff'),
+         url(../font/KIA_LIGHT.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'KiaFont';
+    font-style: normal;
+    font-weight: bold;
+    src: url(../font/KIA_MEDIUM.woff) format('woff'),
+         url(../font/KIA_MEDIUM.ttf) format('truetype');
+}
+
+/*reset*/
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, table {margin:0; padding: 0;}
+header, main, footer, section, article, aside, nav {display: block;}
+a {color: inherit; text-decoration: inherit;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+table {border-collapse: collapse;}
+.mobile {display: none;}
+
+/*common*/
+body {font-family: KiaFont, '나눔고딕', '돋움', Dotum, Helvetica, 'Apple SD Gothic Neo', sans-serif; color: #333333; font-size: 13px; background: #f2f2f2;}
+body {}
+#wrapper {width: 976px; margin: 0 auto; background: #ffffff;}
+#skip-nav {position: fixed; left: 0; width: 100%; top: -40px; text-align: center; line-height: 40px; background: rgba(0, 0, 0, 0.5); color: #ffffff; font-size: 16px; z-index: 10000; transition: top 0.3s;} /*css3 transition 속성 사용해서 애니메이션 효과줌*/
+#skip-nav:focus {top: 0;}
+#header {border-bottom: 1px solid #e0e0e0; margin-bottom: 5px;} /*header 영역 bottom 부분의 회색선*/
+#header-top {height: 70px; position: relative; border-bottom: 3px solid #bc182d;} /*header-top 영역의 빨간선 디자인*/
+#header h1 {position: absolute; left: 20px; top: 10px;} /*기아로고*/
+#sns-link {position: absolute; right: 20px; top: 8px;} /*sns로고*/
+#sns-link li {float: left; margin-left: 5px;} /*float을 시키면 속성이 inline-block으로 바뀌어서 일자로 정렬된다*/
+#gnb ul {position: absolute; right: 20px; top: 40px;}
+#gnb ul li {float: left; font-size: 15px; font-weight: bold; color: #777777;}
+#gnb ul li + li:before {content: '|'; font-size: 11px; color: #999999; margin: 0 2px;} /*content 이용해서 |바 생성 li와li 사이*/
+#gnb ul li a {display: inline-block; padding: 2px 8px; border-radius: 3px;}
+#gnb ul li a:hover {background: #b2182d; color: #ffffff;} /*마우스 hover 할때 레드색 박스가생기면서 글씨체가 흰색으로바뀜*/
+#header-bottom {}
+#header-bottom p.search {text-align: right; padding-right: 20px; line-height: 34px;}
+#header-bottom p.search * {vertical-align: middle;} /*검색창 가운데 배치*/
+#header-bottom p.search label {font-weight: bold; margin-right: 10px; color: #777777;} 
+#header-bottom p.search input[type=text] {border: 1px solid #cccccc; height: 22px; width: 160px; border-radius: 9px; box-sizing: border-box; padding: 0 8px; font-family: inherit; color: #777777; box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1) inset;} /*input 검색창 디자인*/
+
+#footer {background: #f2f2f2 url(../img/bg_footer.gif) 0 bottom no-repeat; padding: 12px 0 50px 0; position: relative; overflow: hidden;}
+#footer ul li a:first-child:hover {text-decoration: underline;}
+#footer ul.more-content {text-align: center; margin-bottom: 10px;}
+#footer ul.more-content li {display: inline-block; font-weight: bold; font-size: 14px; line-height: 22px;}
+#footer ul.more-content li + li:before {content: '|'; margin: 0 10px; color: #999999; font-size: 12px;}
+#footer ul.more-content li select {height: 22px; box-sizing: border-box; border: 1px solid #cccccc; padding-left: 8px; vertical-align: middle;} 
+/*kia-bolg, kia-app select 디자인*/
+#footer ul.more-content li a.go {display: inline-block; height: 22px; width: 34px; border: 1px solid #cccccc; background: #ffffff; text-align: center;
+line-height: 20px; box-sizing: border-box; vertical-align: middle;} /*GO버튼*/
+#footer ul.more-content li a.go:hover {border-color: #999999;} /*GO버튼 hover 할때 색상변경 디자인*/
+#footer ul.etc-content {text-align: center; margin-bottom: 5px;}
+#footer ul.etc-content li {display: inline-block; font-size: 13px; font-weight: bold; color: #777777; line-height: 20px;}
+#footer ul.etc-content li + li:before {content: '|'; margin: 0 10px; font-size: 11px; color: #999999;}
+#footer ul.etc-content li.sitemap a:after {content: ''; display: inline-block; width: 20px; height: 20px; background: url(../img/btn_open.gif) 0 0 no-repeat; vertical-align: middle; margin-left: 10px;} /* + 버튼 생성*/
+#footer ul.etc-content li.sitemap.on a:after {background-image: url(../img/btn_close.gif);} /* + 버튼 바뀜*/
+#footer ul.sitemap {text-align: center; display: none;}
+#footer ul.sitemap.on {display: inline-block;}
+#footer ul.sitemap li {display: inline-block; font-size: 13px; font-weight: bold; color: #777777;}
+#footer ul.sitemap li + li {margin-left: 15px;}
+#footer p.copyright {position: absolute; left: 0; bottom: 9px; width: 100%; text-align: center; font-size: 11px; color: #999999;}
+#footer p.hidden {position: absolute; left: -9999px;}
+
+
+
+/* main */
+#main-visual {height: 328px; position: relative; overflow: hidden;}
+#main-visual ul.image li {position:absolute; left: 0; top 0; display: none;} /*ir기법*/
+#main-visual ul.image li:first-child {display: block;}
+#main-visual ul.indicator {position: absolute; right: 20px; bottom: 15px;} 
+#main-visual ul.indicator li {float: left; margin-left: 5px;}
+#main-visual ul.indicator li a {display: block; width: 20px; line-height: 20px; background: #777777; color: #ffffff; text-align: center;} 
+#main-visual ul.indicator li.on a {background: #bc182d;}
+#main-article {padding: 40px 28px 28px 28px;}
+#main-article h2 {font-size: 22px; color: #bc182d; margin-bottom: 20px;}
+#main-article p.more a {display: block; line-height: 30px; font-size: 15px; font-weight: bold; color: #ffffff; background: #aaaaaa; text-align: center;}
+#main-article p.more a span.fontawesome {margin-left: 10px;}
+
+
+/* sub(common)*/
+
+
+/* sub(page) */
+
+
+/* module */
+ul.article {overflow: hidden;}
+ul.article li {width: 290px; height: 305px; overflow: hidden; float: left; margin-right: 25px; margin-bottom: 25px;} 
+ul.article li:nth-child(3n) {margin-right: 0;}
+ul.article li > * {display: block;}
+ul.article li span.category {font-size: 13px; color: #777777; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+ul.article li a {height: 216px; overflow: hidden; margin-bottom: 5px; background: url(../img/logo.gif) center center no-repeat; position: relative;}
+ul.article li a:hover:after {content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: url(../img/bg_over.png) 0 0 no-repeat;}
+ul.article li a img {width: 100%; min-height: 100%;}
+ul.article li em.title {font-size: 15px; font-weight: bold; overflow: hidden; height: 60px; line-height: 20px;}
+
+
+
+
+
+
